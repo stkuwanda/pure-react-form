@@ -1,4 +1,4 @@
-# React Register Form Project
+# Pure React Registration Form Project
 
 This project is built on React and Vite demonstrates a simple registration form with validation using pure React and CSS for styling. No UI frameworks.
 
