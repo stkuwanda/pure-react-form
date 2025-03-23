@@ -1,10 +1,10 @@
 import './FormInput.component.css';
 
-function FormInput({...props}) {
+function FormInput({ id, label, ...props }) {
 	return (
 		<div className='formInput'>
-			{/* <label>Username</label> */}
-			<input {...props}/>
+			<label htmlFor={id}>{label}</label> 
+			<input id={id} {...props} />
 		</div>
 	);
 }
