@@ -1,22 +1,20 @@
-import { useRef } from 'react';
 import './App.css';
 import FormInput from './components/FormInput/FormInput.component';
 
 function App() {
-	const usernameRef = useRef();
-
 	function handleSubmit(event) {
 		event.preventDefault();
-		console.log('usernameRef:', usernameRef.current?.value);
+    const data = new FormData(event.target);
+    console.log(Object.fromEntries(data.entries()));
 	}
 
 	return (
 		<div className='app'>
 			<form onSubmit={handleSubmit}>
-				<FormInput ref={usernameRef} placeholder='Username' />
-				<FormInput placeholder='Email' />
-				<FormInput placeholder='Full Name' />
-				<FormInput placeholder='another' />
+				<FormInput name='username' placeholder='Username' />
+				<FormInput name='email' placeholder='Email' />
+				<FormInput name='fullName' placeholder='Full Name' />
+				<FormInput name='another' placeholder='another' />
 				<button type='submit'>Submit</button>
 			</form>
 		</div>
