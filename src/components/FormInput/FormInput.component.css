@@ -15,3 +15,16 @@ label {
   font-size: 12px;
   color: rgb(146, 146, 146);
 }
+
+span {
+  font-size: 12px;
+  padding: 4px 0px;
+  color: red;
+  margin-bottom: 22px;
+  display: none;
+}
+
+input:invalid ~ span {
+  display: inline;
+}
+
